@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  href?: string;
+  delay?: number;
+}
+
+const { title, description, icon, href = '#', delay = 0 } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div
+  class="group relative bg-secondary/60 border border-primary/40 rounded-2xl p-6 hover:border-cyan/50 hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:shadow-cyan/10 animate-fade-in-up opacity-0"
+  style={`animation-delay: ${delay}ms; animation-fill-mode: forwards;`}
+>
+  <!-- Icon -->
+  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary border border-cyan/20 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-cyan/20 transition-shadow duration-300">
+    <span class="text-cyan" set:html={icon} />
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-white font-semibold text-lg mb-2 group-hover:text-cyan transition-colors duration-200">
+    {title}
+  </h3>
+
+  <!-- Description -->
+  <p class="text-accent/70 text-sm leading-relaxed mb-4">
+    {description}
+  </p>
+
+  <!-- Link -->
+  <a
+    href={`${base}servicios`}
+    class="inline-flex items-center gap-1.5 text-cyan text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+  >
+    Ver más
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </a>
+
+  <!-- Decorative corner -->
+  <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-cyan/5 to-transparent rounded-2xl pointer-events-none"></div>
+</div>
