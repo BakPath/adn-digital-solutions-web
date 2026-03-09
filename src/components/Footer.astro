@@ -55,7 +55,7 @@ const year = new Date().getFullYear();
             'Automatización RPA',
           ].map((service) => (
             <li>
-              <a href={`${base}servicios`} class="text-accent/60 hover:text-cyan text-sm transition-colors duration-200 flex items-center gap-1.5">
+              <a href={`${base}servicios/`} class="text-accent/60 hover:text-cyan text-sm transition-colors duration-200 flex items-center gap-1.5">
                 <span class="w-1 h-1 rounded-full bg-cyan/50 flex-shrink-0"></span>
                 {service}
               </a>
@@ -69,10 +69,10 @@ const year = new Date().getFullYear();
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Empresa</h3>
         <ul class="space-y-2.5">
           {[
-            { label: 'Nosotros', href: `${base}nosotros` },
-            { label: 'Servicios', href: `${base}servicios` },
-            { label: 'Casos de éxito', href: `${base}nosotros` },
-            { label: 'Contacto', href: `${base}contacto` },
+            { label: 'Nosotros', href: `${base}nosotros/` },
+            { label: 'Servicios', href: `${base}servicios/` },
+            { label: 'Casos de éxito', href: `${base}nosotros/` },
+            { label: 'Contacto', href: `${base}contacto/` },
           ].map((link) => (
             <li>
               <a href={link.href} class="text-accent/60 hover:text-cyan text-sm transition-colors duration-200 flex items-center gap-1.5">

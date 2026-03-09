@@ -3,9 +3,9 @@ const base = import.meta.env.BASE_URL;
 
 const navLinks = [
   { href: `${base}`, label: 'Inicio' },
-  { href: `${base}servicios`, label: 'Servicios' },
-  { href: `${base}nosotros`, label: 'Nosotros' },
-  { href: `${base}contacto`, label: 'Contacto' },
+  { href: `${base}servicios/`, label: 'Servicios' },
+  { href: `${base}nosotros/`, label: 'Nosotros' },
+  { href: `${base}contacto/`, label: 'Contacto' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -45,7 +45,7 @@ const currentPath = Astro.url.pathname;
       <!-- Desktop CTA -->
       <div class="hidden lg:flex items-center gap-4">
         <a
-          href={`${base}contacto`}
+          href={`${base}contacto/`}
           class="px-5 py-2.5 rounded-lg bg-cyan text-dark font-semibold text-sm hover:bg-accent transition-all duration-200 shadow-lg shadow-cyan/25 hover:shadow-cyan/40 hover:-translate-y-0.5"
         >
           Solicitar consulta
@@ -83,7 +83,7 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
         <a
-          href={`${base}contacto`}
+          href={`${base}contacto/`}
           class="mt-2 px-4 py-3 rounded-lg bg-cyan text-dark font-semibold text-sm text-center hover:bg-accent transition-colors"
         >
           Solicitar consulta

@@ -7,6 +7,7 @@ export default defineConfig({
   site: 'https://BakPath.github.io',
   base: '/adn-digital-solutions-web',
   output: 'static',
+  trailingSlash: 'always',
 
   vite: {
     plugins: [tailwindcss()],
